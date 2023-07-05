@@ -1,8 +1,7 @@
 # Создайте функцию генератор чисел Фибоначчи
 
 def fibonacci_numbers(n):
-    fib1 = 0
-    fib2 = 1
+    fib1, fib2 = 0, 1
     if n in (1, 2):
         return 1
     for i in range(1, n + 1):
