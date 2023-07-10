@@ -5,6 +5,9 @@
 # Программа получает на вход восемь пар чисел, каждое число от 1 до 8 - координаты 8 ферзей.
 # Если ферзи не бьют друг друга верните истину, а если бьют - ложь.
 
+__all__ = ['is_valid_queens']
+
+
 def is_valid_queens(queens):
     for i in range(len(queens)):
         for j in range(i + 1, len(queens)):
