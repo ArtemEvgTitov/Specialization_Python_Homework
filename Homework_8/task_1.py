@@ -13,6 +13,10 @@ import pickle
 
 
 def create_dict(path):
+    """
+    :param path: путь до директории
+    :return: возвращает словарь, содержащий путь, вложенные директории и файлы, а также их размер
+    """
     os.chdir(path)
     my_dict = {}
     id_path = 0
@@ -31,11 +35,19 @@ def create_dict(path):
 
 
 def file_json(my_dict):
+    """
+    :param my_dict: словарь
+    :return: Создаёт файл json
+    """
     with open('dir.json', 'w', encoding='utf-8') as new_file_json:
         json.dump(my_dict, new_file_json, ensure_ascii=False)
 
 
 def file_csv(my_dict):
+    """
+    :param my_dict: словарь
+    :return: Создаёт файл csv
+    """
     with open('dir.csv', 'w', newline='', encoding='utf-8') as new_file_csv:
         csv_write = csv.DictWriter(new_file_csv, fieldnames=["ID", "Path",
                                                          "Dir_name", "File_name", "Size"],
@@ -55,6 +67,10 @@ def file_csv(my_dict):
 
 
 def file_pickle(my_dict):
+    """
+    :param my_dict: словарь
+    :return: Создаёт файл pickle
+    """
     with open('my_dict.pickle', 'wb') as new_file_pickle:
         pickle.dump(my_dict, new_file_pickle, protocol=pickle.DEFAULT_PROTOCOL)
 
