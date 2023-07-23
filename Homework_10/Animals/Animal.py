@@ -1,6 +1,6 @@
 class Animal:
 
-    def __init__(self, name, age, voise, eat):
+    def __init__(self, name: str, age: int, voise, eat):
         self.name = name
         self.age = age
         self.voise = voise

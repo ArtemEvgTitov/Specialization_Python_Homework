@@ -3,7 +3,7 @@ from Homework_10.Animals.Animal import Animal
 
 class Horse(Animal):
 
-    def __init__(self, name: str, age: int, speed: int):
+    def __init__(self, name, age, speed: int):
         super().__init__(name, age, voise='Ржёт', eat='Сено, солома, овёс, трава')
         self.trophy = None
         self.speed = speed

@@ -5,7 +5,7 @@ class Cat(Animal):
 
     __health = 9
 
-    def __init__(self, name: str, age: int, purr: int):
+    def __init__(self, name, age, purr: int):
         super().__init__(name, age, voise='Маукает', eat='Корм, птица, рыба')
         self.purr = purr
 

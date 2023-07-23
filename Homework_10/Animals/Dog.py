@@ -3,7 +3,7 @@ from Homework_10.Animals.Animal import Animal
 
 class Dog(Animal):
 
-    def __init__(self, name: str, age: int, breed: str):
+    def __init__(self, name, age, breed: str):
         super().__init__(name, age, voise='Лает', eat='Мясо, птица, рыба')
         self.commands = ['Сидеть', 'Лежать', 'Дай лапу']
         self.breed = breed
