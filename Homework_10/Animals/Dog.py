@@ -1,4 +1,4 @@
-import Animal
+from Homework_10.Animals.Animal import Animal
 
 
 class Dog(Animal):
