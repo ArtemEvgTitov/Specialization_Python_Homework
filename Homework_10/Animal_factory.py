@@ -1,17 +1,15 @@
 from Animals.Dog import Dog
 from Animals.Horse import Horse
 from Animals.Cat import Cat
-#
-# dog = Dog('Джек', 10, 'Лайка')
-# dog.add_command('Гулять')
-# horse = Horse('Конь', 5, 70)
-# horse.add_trophy('Самый быстрый')
-# cat = Cat('Мурка', 3, 3000)
-#
-#
-#
-# print(dog.to_str())
-# print(horse.to_str())
-# print(cat.to_str())
 
-class
+
+class AnimalFactory(Dog, Horse, Cat):
+
+    def create_dog(self, name, age, breed):
+        Dog.__init__(self, name, age, breed)
+
+    def create_horse(self, name, age, speed):
+        Horse.__init__(self, name, age, speed)
+
+    def create_cat(self, name, age, purr):
+        Cat.__init__(self, name, age, purr=3000)
