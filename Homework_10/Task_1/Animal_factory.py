@@ -4,6 +4,10 @@ from Animals.Horse import Horse
 
 
 class AnimalFactory:
+    """
+    Класс для фабрики животных.
+    Содержит метод, который принимает тип животного и возвращает экземпляр класса
+    """
 
     @staticmethod
     def create_animal(animal_type, *args, **kwargs):

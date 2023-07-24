@@ -2,6 +2,11 @@ from Homework_10.Task_1.Animals.Animal import Animal
 
 
 class Cat(Animal):
+    """
+    Класс для Cat.
+    Содержит конструктор класса, переопределение метода печати to_str,
+    метод для увеличения уровня мурчателя
+    """
 
     __health = 9
     __voise = 'Маукает'

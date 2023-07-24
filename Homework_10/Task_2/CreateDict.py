@@ -2,6 +2,11 @@ import os
 
 
 class CreateDict:
+    """
+    Класс для CreateDict.
+    Создаёт экземпляр класса со словарём, содержащим
+    вложенные директории и файлы, а также их размер
+    """
 
     def __init__(self, path):
         self.my_dict = self.__create_dict(path)

@@ -1,4 +1,8 @@
 class Animal:
+    """
+    Класс для Animal.
+    Содержит конструктор класса и метод печати to_str
+    """
 
     def __init__(self, name: str, age: int, voise, eat):
         self.name = name

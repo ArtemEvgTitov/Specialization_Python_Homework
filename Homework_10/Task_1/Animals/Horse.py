@@ -2,6 +2,11 @@ from Homework_10.Task_1.Animals.Animal import Animal
 
 
 class Horse(Animal):
+    """
+    Класс для Horse.
+    Содержит конструктор класса, переопределение метода печати to_str,
+    метод для редактирования звания-трофея
+    """
 
     __voise = 'Ржёт'
     __eat = 'Сено, солома, овёс, трава'
