@@ -3,8 +3,11 @@ from Homework_10.Animals.Animal import Animal
 
 class Horse(Animal):
 
+    __voise = 'Ржёт'
+    __eat = 'Сено, солома, овёс, трава'
+
     def __init__(self, name, age, speed: int):
-        super().__init__(name, age, voise='Ржёт', eat='Сено, солома, овёс, трава')
+        super().__init__(name, age, self.__voise, self.__eat)
         self.trophy = None
         self.speed = speed
 

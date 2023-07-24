@@ -3,8 +3,11 @@ from Homework_10.Animals.Animal import Animal
 
 class Dog(Animal):
 
+    __voise = 'Лает'
+    __eat = 'Мясо, птица, рыба'
+
     def __init__(self, name, age, breed: str):
-        super().__init__(name, age, voise='Лает', eat='Мясо, птица, рыба')
+        super().__init__(name, age, self.__voise, self.__eat)
         self.commands = ['Сидеть', 'Лежать', 'Дай лапу']
         self.breed = breed
 
