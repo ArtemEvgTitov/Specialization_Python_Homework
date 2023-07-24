@@ -1,6 +1,6 @@
+from Animals.Cat import Cat
 from Animals.Dog import Dog
 from Animals.Horse import Horse
-from Animals.Cat import Cat
 
 
 class AnimalFactory:

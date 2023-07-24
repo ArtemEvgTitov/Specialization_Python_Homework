@@ -1,4 +1,4 @@
-from Homework_10.Animals.Animal import Animal
+from Homework_10.Task_1.Animals.Animal import Animal
 
 
 class Horse(Animal):
