@@ -4,6 +4,7 @@ from Animals.Cat import Cat
 
 
 class AnimalFactory:
+
     @staticmethod
     def create_animal(animal_type, *args, **kwargs):
         if animal_type == "Dog":
