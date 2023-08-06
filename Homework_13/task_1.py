@@ -23,13 +23,12 @@ class Matrix:
         self.matrix = self.__create_matrix(rows, columns)
 
     def __create_matrix(self, rows, columns):
+        rows = self.__digit_check(rows)
+        columns = self.__digit_check(columns)
         try:
             self.matrix = [[0] * columns for _ in range(rows)]
         except TypeError as e:
-            print(f'Попыткаа создания матрицы закончилась с ошибкой: {e}. '
-                  f'\nДля создания матрицы необходимо использовать целые числа.'
-                  f'\nВы ввели "{rows}" в качестве количества строк, '
-                  f'и "{columns}" в качестве количества столбцов')
+            self.__print_error(e, rows, columns)
         else:
             for i in range(rows):
                 for j in range(columns):
@@ -42,16 +41,37 @@ class Matrix:
         :return: Возвращает строку для вывода через print
         """
         string_matrix = ''
-        for row in self.matrix:
-            string_matrix += f"\n{row}"
-        return string_matrix
+        try:
+            for row in self.matrix:
+                string_matrix += f"\n{row}"
+        except TypeError as e:
+            self.__print_error(e, self.matrix)
+        finally:
+            return string_matrix
+
+    def __digit_check(self, number):
+        try:
+            number = int(number)
+            if number < 1:
+                raise MyException(number)
+            return number
+        except ValueError as e:
+            self.__print_error(e, number)
+
+    def __print_error(self, e, *args):
+        print(f'Попытка создания матрицы закончилась с ошибкой: {e}. '
+              f'\nДля создания матрицы необходимо использовать целые числа.'
+              f'\nВы ввели: "{args}"')
 
 
 class MyException(Exception):
+    def __init__(self, value):
+        self.value = value
 
-
-    pass
+    def __str__(self):
+        return f'Размер матрицы не может быть отрицательным или равным нулю. Вы ввели {self.value}'
 
 
 if __name__ == '__main__':
-    matrix = Matrix('3', '3')
+    matrix = Matrix('a', '3')
+    print(matrix)
